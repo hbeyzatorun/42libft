@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 16:25:48 by htorun            #+#    #+#             */
-/*   Updated: 2025/05/29 18:58:07 by htorun           ###   ########.fr       */
+/*   Created: 2025/05/30 02:02:42 by htorun            #+#    #+#             */
+/*   Updated: 2025/05/30 02:39:08 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+#include <stdio.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (c - 32);
-	}
-	return (c);
+	const char		*ptr;
+	unsigned char	*dptr;
+
+	dptr = dest;
+	ptr = src;
+	while (n--)
+		*dptr++ = *ptr++;
+	return (dest);
+}
+
+int	main(void)
+{
+	const char *ptr = "selamnaber&yok";
+	char dest[42];
+	ft_memset(dest, '\0', 42);
+	ft_memcpy(dest, ptr, 42);
+	printf("%s", dest);
+	return (0);
 }

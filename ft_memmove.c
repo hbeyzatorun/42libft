@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/30 04:44:27 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/03 22:54:03 by htorun           ###   ########.fr       */
+/*   Created: 2025/06/03 23:01:29 by htorun            #+#    #+#             */
+/*   Updated: 2025/06/04 05:11:13 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char d;
+	unsigned char s;
 
-	ptr = (unsigned char *)s;
-	while (n--)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+
+	if (dest == NULL && src == NULL)
+		return (NULL);
+	if (dest > src)
 	{
-		*ptr++ = 0;
+		while (n > 0)
+			d = s;
+		n--;
+		return (dest);
 	}
+	void *ft_memcpy(void *dest, const void *src, size_t n);
 }
-#include <stdio.h>
-
-/*int	main(void)
-{
-	char str[6] = "beyza";
-	ft_bzero(str, sizeof(str));
-	printf("%d", str[1]);
-}*/

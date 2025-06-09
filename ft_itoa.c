@@ -1,7 +1,6 @@
 
 #include "libft.h"
 
-
 int count_digit(int  n)
 {
     int count;

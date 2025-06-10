@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 04:44:27 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/03 22:54:03 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/10 15:23:41 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_bzero(void *s, size_t n)
 		*ptr++ = 0;
 	}
 }
-#include <stdio.h>
+//#include <stdio.h>
 
 /*int	main(void)
 {

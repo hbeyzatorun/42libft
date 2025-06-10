@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 19:36:44 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/03 22:53:53 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/10 15:24:16 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *result;
+	void	*result;
 
 	result = malloc(size * nmemb);
 	if (!result)

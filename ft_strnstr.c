@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:05:05 by htorun            #+#    #+#             */
-/*   Updated: 2025/05/29 18:39:54 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/10 14:12:54 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (*little == '\0')
 	{
-		return ((char *) big);
+		return ((char *)big);
 	}
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] && little[j] && big[i + j] == little[j]
-			&& (i + j) < len)
+		while (big[i + j] && little[j] && big[i + j] == little[j] && (i
+				+ j) < len)
 		{
 			j++;
 		}

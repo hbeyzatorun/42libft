@@ -22,11 +22,3 @@ void	ft_bzero(void *s, size_t n)
 		*ptr++ = 0;
 	}
 }
-//#include <stdio.h>
-
-/*int	main(void)
-{
-	char str[6] = "beyza";
-	ft_bzero(str, sizeof(str));
-	printf("%d", str[1]);
-}*/

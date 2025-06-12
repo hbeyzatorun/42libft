@@ -6,12 +6,9 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:48:04 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/04 02:55:36 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/11 15:12:36 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -40,10 +37,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (sign * num);
-}
-
-int	main(void)
-{
-	printf("orignail: %d\n", atoi("2147483647214748364"));
-	printf("	my:%d\n", ft_atoi("00000000000000000000000000"));
 }

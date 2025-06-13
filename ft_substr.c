@@ -6,45 +6,41 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:45:36 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/10 15:46:01 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/13 08:28:12 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_fillstr(char const *s, unsigned int start, size_t len)
+{
+	size_t	str_len;
+
+	str_len = ft_strlen(s);
+	if (start >= str_len)
+	{
+		return (0);
+	}
+	if (len > str_len - start)
+		return (str_len - start);
+	return (len);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;
-	size_t	str_len;
-	size_t	copy;
+	size_t	copy_len;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	str_len = ft_strlen(s);
-	if (start > ft_strlen(s))
-	{
-		str = (char *)malloc(1);
-		if (!str)
-		{
-			return (NULL);
-		}
-		str[0] = '\0';
-		return (str);
-	}
-	if (len > str_len - start)
-		copy = str_len - start;
-	else
-		copy = len;
-	str = (char *)malloc(copy + 1);
+	copy_len = ft_fillstr(s, start, len);
+	str = (char *)malloc(copy_len + 1);
 	if (!str)
 		return (NULL);
-	while (i < copy)
-	{
-		str[i] = s[start + i];
-		i++;
-	}
-	str[copy] = '\0';
+	while (i < copy_len)
+		str[i++] = s[start++];
+	str[i] = '\0';
 	return (str);
 }

@@ -10,7 +10,7 @@ CFILES =	ft_isalpha.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
 		ft_strjoin.c \
-		ft_split.c	 \
+		ft_split.c   \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_strchr.c  \
@@ -22,7 +22,9 @@ CFILES =	ft_isalpha.c \
 		ft_atoi.c    \
 		ft_calloc.c  \
 		ft_strdup.c  \
-		ft_substr.c 
+		ft_substr.c  \
+		ft_strtrim.c \
+		ft_itoa.c
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 OFILES = $(CFILES:.c=.o)

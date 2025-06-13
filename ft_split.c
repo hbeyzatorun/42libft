@@ -6,13 +6,13 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:36:07 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/13 01:44:43 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/13 09:31:46 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	counter(char const *s, char c)
+static int	counter(char const *s, char c)
 {
 	int	count;
 	int	word;
@@ -35,7 +35,7 @@ int	counter(char const *s, char c)
 	return (count);
 }
 
-int	ft_wlen(char const *s, char c)
+static int	ft_wlen(char const *s, char c)
 {
 	int	len;
 

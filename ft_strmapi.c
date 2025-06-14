@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 14:02:14 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/10 14:12:49 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/14 03:05:14 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
-	result = (char *)malloc(sizeof(char *)(len + 1));
+	result = (char *)malloc(sizeof(char *)*(len + 1));
 	if (!result)
 		return (NULL);
 	i = 0;

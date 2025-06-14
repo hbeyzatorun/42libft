@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:40:58 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/13 09:26:33 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/14 02:57:28 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stddef.h>
+# include <unistd.h>
 
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+}		t_list;
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

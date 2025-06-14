@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: htorun <htorun@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 23:01:29 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/14 02:55:46 by htorun           ###   ########.fr       */
+/*   Created: 2025/06/14 01:00:15 by htorun            #+#    #+#             */
+/*   Updated: 2025/06/14 01:48:28 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list *ft_lstnew(void *content)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	t_list	*node;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (dest == NULL && src == NULL)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	if (dest > src)
-	{
-		while (n > 0)
-			*d = *s;
-		n--;
-	}
-	return (dest);
+	node -> content = content;
+	node -> next = NULL;
+	return(node);
+		
+}
+#include <stdio.h>
+int	main()
+{
+	t_list *a;
+
+	a = ft_lstnew(ft_strdup("beyza"));
+	printf("%s\n",(char *)a -> content);
 }

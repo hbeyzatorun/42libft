@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:32:32 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/10 15:35:11 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/14 03:02:55 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	if (!s)
-		return (NULL);
+		return;
 	i = 0;
 	while (s[i])
 	{

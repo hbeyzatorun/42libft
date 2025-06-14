@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:31:11 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/10 15:31:20 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/14 03:02:07 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		return (ft_strdup("-2147483648"));
+		return (ft_putstr_fd("-2147483648", 1));
 	}
 	if (n < 0)
 	{

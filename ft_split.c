@@ -63,15 +63,13 @@ static void	*error_handling(char **split, int count)
 
 char	**ft_split(char const *s, char c)
 {
-	int		wordcount;
 	int		i;
 	char	**result;
 	int		len;
 
 	if (!s)
 		return (NULL);
-	wordcount = counter(s, c);
-	result = malloc(sizeof(char *) * (wordcount + 1));
+	result = ft_calloc((counter(s, c) + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -89,6 +87,5 @@ char	**ft_split(char const *s, char c)
 			s += len;
 		}
 	}
-	result[i] = NULL;
 	return (result);
 }

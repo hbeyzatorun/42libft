@@ -47,6 +47,20 @@ static int	ft_wlen(char const *s, char c)
 	return (len);
 }
 
+static void	*error_handling(char **split, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		wordcount;
@@ -68,7 +82,10 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			len = ft_wlen(s, c);
-			result[i++] = ft_substr(s, 0, len);
+			result[i] = ft_substr(s, 0, len);
+			if (!result[i])
+				return (error_handling(result, i));
+			i++;
 			s += len;
 		}
 	}

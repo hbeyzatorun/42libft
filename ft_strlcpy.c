@@ -6,7 +6,7 @@
 /*   By: htorun <htorun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 15:08:46 by htorun            #+#    #+#             */
-/*   Updated: 2025/06/10 14:12:44 by htorun           ###   ########.fr       */
+/*   Updated: 2025/06/17 20:43:59 by htorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	str_len;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
+	str_len = ft_strlen(src);
+	if (!dst || size == 0)
+		return (str_len);
 	if (size > 0)
 	{
 		while (src[i] && i < size - 1)

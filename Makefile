@@ -37,14 +37,12 @@ SRCS = ft_atoi.c \
 	ft_strtrim.c \
 	ft_substr.c \
 	ft_tolower.c \
-	ft_toupper.c \
-	ft_lstnew.c \
-	ft_lstadd_front.c
+	ft_toupper.c 
 
 OBJS = $(SRCS:.c=.o)
 
 BONUS = ft_lstnew.c \
-		ft_lstadd_front.c \
+		ft_lstadd_front.c
 BNSOBJ = $(BONUS:.c=.o)
 		
 all : $(NAME)
@@ -54,9 +52,6 @@ $(NAME) : $(OBJS)
 
 bonus : $(NAME) $(BNSOBJ) 
 	ar rcs $(NAME) $(OBJS) $(BNSOBJ)
-
-%.o : %.c
-	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
 	rm -f $(OBJS) $(BNSOBJ)
